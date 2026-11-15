@@ -1,121 +1,78 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
     <head>
-
         <meta charset="UTF-8">
-
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <title>Shop.co</title>
-
+        <link rel="stylesheet" href="css/style.css">
+        <script type="module" src="js/script.js"></script>
     </head>
 
     <body>
-
         <header>
-
-            <a href="#">
-
-                <img src="#" alt="">
-
+            <a href="index.html">
+                <img src="assets/icons/SHOP.CO.png" alt="Shop.co Home">
             </a>
 
-                <nav>
+            <nav aria-label="Primary">
+                <ul>
+                    <li>
+                        <a href="pages/shop.html">Shop</a>
+                    </li>
+                    <li>
+                        <a href="pages/shop.html?filter=sale">On Sale</a>
+                    </li>
+                    <li>
+                        <a href="pages/shop.html?filter=new">New Arrivals</a>
+                    </li>
+                    <li>
+                        <a href="#brands">Brands</a>
+                    </li>
+                </ul>
+            </nav>
 
-                    <img src="assets/icons/SHOP.CO.png" alt="">
-
-                    <ul>
-
-                        <li>
-                            <a href="#">
-                                Shop
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                On Sale
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                New Arrivals
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                Brands
-                            </a>
-                        </li>
-
-                        <input 
+            <search>
+                <form action="pages/shop.html" method="GET">
+                    <input
                         type="search"
                         name="q"
-                        placeholder="Search for products"
-                        aria-label="Search through Site Content"
-                        required
-                        />
+                        placeholder="Search for products..."
+                        aria-label="Search for products"
+                    >
+                </form>
+            </search>
 
-                        <div class="account-wrapper">
+            <div class="account-wrapper">
+                <button id="accountBtn" type="button" popovertarget="accountDropdown">
+                    Account
+                </button>
 
-                            <button id="accountBtn" type="button">
+                <div id="accountDropdown" popover="auto">
+                    <a href="pages/account.html">My Profile</a>
+                    <a href="pages/account.html#orders">Orders</a>
+                    <button type="button" id="logoutBtn">Log Out</button>
+                </div>
+            </div>
 
-                                Account
+            <div class="cart-wrapper">
+                <button id="cartBtn" type="button" aria-label="Open shopping cart">
+                    <img src="assets/icons/Vector-3.png" alt="" width="24" height="24">
+                    <span id="cartCount" aria-live="polite">0</span>
+                </button>
 
-                            </button>
+                <dialog id="cartDrawer" closedby="any" aria-label="Shopping Cart">
+                    <form method="dialog">
+                        <button id="closeCartBtn" type="submit">Close</button>
+                    </form>
 
-                            <div id="accountDropdown" hidden>
+                    <p>Your cart items go here.</p>
 
-                                <a href="/profile">My Profile</a>
-
-                                <a href="/orders">Orders</a>
-
-                                <a href="/logout">Log Out</a>
-
-                            </div>
-
-                        </div>
-
-                        <div class="cart-wrapper">
-
-                            <button id="cartBtn" type="button">
-
-                                <img src="assets/icons/Vector-3.png" alt=""> <span id="cartCount">0</span>
-
-                            </button>
-
-                            <aside id="cartDrawer" hidden>
-
-                                <button id="closeCartBtn" type="button">Close</button>
-
-                                <p>
-                                    Your cart items go here.
-                                </p>
-
-                                <a href="/checkout">
-                                    Checkout
-                                </a>
-
-                            </aside>
-                            
-                        </div>
-
-                    </ul>
-
-                </nav>
-
+                    <a href="pages/checkout.html">Checkout</a>
+                </dialog>
+            </div>
         </header>
 
         <main>
-
-            
-
         </main>
-        
     </body>
-
 </html>
