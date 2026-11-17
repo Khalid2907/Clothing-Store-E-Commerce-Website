@@ -9,66 +9,78 @@
     </head>
 
     <body>
-        <header>
-            <a href="index.html">
-                <img src="assets/icons/SHOP.CO.png" alt="Shop.co Home">
+        <header class="site-header">
+            <a href="index.html" class="header-logo-link">
+                <img src="assets/icons/SHOP.CO.png" alt="Shop.co Home" class="logo">
             </a>
 
-            <nav aria-label="Primary">
-                <ul>
+            <nav class="header-nav" aria-label="Primary">
+                <ul class="nav-links">
                     <li>
-                        <a href="pages/shop.html">Shop</a>
+                        <a href="pages/shop.html">
+                            Shop
+                        </a>
                     </li>
                     <li>
-                        <a href="pages/shop.html?filter=sale">On Sale</a>
+                        <a href="pages/shop.html?filter=sale">
+                            On Sale
+                        </a>
                     </li>
                     <li>
-                        <a href="pages/shop.html?filter=new">New Arrivals</a>
+                        <a href="pages/shop.html?filter=new">
+                            New Arrivals
+                        </a>
                     </li>
                     <li>
-                        <a href="#brands">Brands</a>
+                        <a href="#brands">
+                            Brands
+
+                        </a>
                     </li>
                 </ul>
             </nav>
 
-            <search>
-                <form action="pages/shop.html" method="GET">
+            <search class="header-search">
+                <form action="pages/shop.html" method="GET" class="header-search-form">
                     <input
                         type="search"
                         name="q"
                         placeholder="Search for products..."
                         aria-label="Search for products"
+                        class="header-search-input"
                     >
                 </form>
             </search>
 
-            <div class="account-wrapper">
-                <button id="accountBtn" type="button" popovertarget="accountDropdown">
-                    Account
-                </button>
+            <div class="header-actions">
+                <div class="account-wrapper">
+                    <button id="accountBtn" type="button" class="account-btn" popovertarget="accountDropdown">
+                        Account
+                    </button>
 
-                <div id="accountDropdown" popover="auto">
-                    <a href="pages/account.html">My Profile</a>
-                    <a href="pages/account.html#orders">Orders</a>
-                    <button type="button" id="logoutBtn">Log Out</button>
+                    <div id="accountDropdown" class="account-dropdown" popover="auto">
+                        <a href="pages/account.html">My Profile</a>
+                        <a href="pages/account.html#orders">Orders</a>
+                        <button type="button" id="logoutBtn" class="logout-btn">Log Out</button>
+                    </div>
                 </div>
-            </div>
 
-            <div class="cart-wrapper">
-                <button id="cartBtn" type="button" aria-label="Open shopping cart">
-                    <img src="assets/icons/Vector-3.png" alt="" width="24" height="24">
-                    <span id="cartCount" aria-live="polite">0</span>
-                </button>
+                <div class="cart-wrapper">
+                    <button id="cartBtn" type="button" class="cart-btn" aria-label="Open shopping cart">
+                        <img src="assets/icons/Vector-3.png" alt="" width="24" height="24" class="cart-icon">
+                        <span id="cartCount" class="cart-count" aria-live="polite">0</span>
+                    </button>
 
-                <dialog id="cartDrawer" closedby="any" aria-label="Shopping Cart">
-                    <form method="dialog">
-                        <button id="closeCartBtn" type="submit">Close</button>
-                    </form>
+                    <dialog id="cartDrawer" class="cart-drawer" closedby="any" aria-label="Shopping Cart">
+                        <form method="dialog">
+                            <button id="closeCartBtn" type="submit" class="cart-drawer-close">Close</button>
+                        </form>
 
-                    <p>Your cart items go here.</p>
+                        <p class="cart-drawer-empty">Your cart items go here.</p>
 
-                    <a href="pages/checkout.html">Checkout</a>
-                </dialog>
+                        <a href="pages/checkout.html" class="cart-drawer-cta">Checkout</a>
+                    </dialog>
+                </div>
             </div>
         </header>
 
@@ -76,295 +88,510 @@
 
             <!-- Hero Section -->
 
-            <section id="hero">
-                <h1>
-                    FIND CLOTHES THAT MATCHES YOUR STYLE
-                </h1>
-                <p>
-                    Browes through our diverse range of meticulously crafted garments. designed to bring out your individuality and cater to your sence of style
-                </p>
-                <button type="button">
-                    Shop Now
-                </button>
-                <h2>
-                    200+
-                </h2>
-                <p>
-                    International Brands
-                </p>
-                <h2>
-                    2,000+
-                </h2>
-                <p>
-                    High-Quality products
-                </p>
-                <h2>
-                    30,000+
-                </h2>
-                <p>
-                    Happy Customers
-                </p>
+            <section class="hero" id="hero">
+                <div class="hero-text">
+                    <h1 class="hero-text-heading">
+                        FIND CLOTHES THAT MATCHES YOUR STYLE
+                    </h1>
+                    <p class="hero-text-description">
+                        Browes through our diverse range of meticulously crafted garments. designed to bring out your individuality and cater to your sence of style
+                    </p>
+                    <button type="button" class="hero-cta">
+                        Shop Now
+                    </button>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <h2 class="hero-stat-number">
+                                200+
+                            </h2>
+                            <p class="hero-stat-label">
+                                International Brands
+                            </p>
+                        </div>
+                        <div class="hero-stat">
+                            <h2 class="hero-stat-number">
+                                2,000+
+                            </h2>
+                            <p class="hero-stat-label">
+                                High-Quality products
+                            </p>
+                        </div>
+                        <div class="hero-stat">
+                            <h2 class="hero-stat-number">
+                                30,000+
+                            </h2>
+                            <p class="hero-stat-label">
+                                Happy Customers
+                            </p>
+                        </div>
+                    </div>
+                </div>
                 <div class="hero-image">
-                    <img src="assets/images/Rectangle_2.png">
+                    <img src="assets/images/Rectangle_2.png" alt="">
                 </div>
-                <div class="logos">
-                    <img src="assets/icons/gucci-logo-1_1.svg" alt="">
-                    <img src="assets/icons/zara-logo.svg" alt="">
-                    <img src="assets/icons/prada-logo-1_1.svg" alt="">
-                    <img src="assets/icons/versace-logo.svg" alt="">
-                    <img src="assets/icons/calvin-klein-logo.svg" alt="">
-                </div>
+            </section>
+
+            <section class="logos" id="brands">
+                <img src="assets/icons/gucci-logo-1_1.svg" alt="" class="brand-logo">
+                <img src="assets/icons/zara-logo.svg" alt="" class="brand-logo">
+                <img src="assets/icons/prada-logo-1_1.svg" alt="" class="brand-logo">
+                <img src="assets/icons/versace-logo.svg" alt="" class="brand-logo">
+                <img src="assets/icons/calvin-klein-logo.svg" alt="" class="brand-logo">
             </section>
 
             <!--  New Arrivals -->
 
-            <section id="new-arrivals">
-                <h2>
-                    New Arrivals
-                </h2>
-                <div id="new-arrivals-grid">
-                    <article>
-                        <a href="#">
+            <section class="new-arrivals" id="new-arrivals">
+                <div class="new-arrivals-text">
+                    <h2>
+                        New Arrivals
+                    </h2>
+                </div>
+                <div class="product-cards" id="new-arrivals-grid">
+                    <article class="product-card">
+                        <a href="#" class="product-card-image">
                             <img src="assets/images/T-shirt with Tape Details.png" alt="">
                         </a>
-                        <p>
-                            T-shit with Tape Details
-                        </p>
-                        <img src="assets/icons/4-5-stars.svg" alt="">
-                        <p>
-                            4.5/5
-                        </p>
-                        <p>
-                            $120
-                        </p>
+                        <div class="product-card-text">
+                            <p class="product-card-title">
+                                T-shit with Tape Details
+                            </p>
+                            <div class="product-card-rating">
+                                <img src="assets/icons/4-5-stars.svg" alt="" class="product-card-rating-icon">
+                                <p class="product-card-rating-score">
+                                    4.5/5
+                                </p>
+                            </div>
+                            <p class="product-card-price">
+                                $120
+                            </p>
+                        </div>
                     </article>
-                    <article>
-                        <a href="#">
+                    <article class="product-card">
+                        <a href="#" class="product-card-image">
                             <img src="assets/images/Skinny Fit Jeans.png" alt="">
                         </a>
-                        <p>
-                            Skinny Fit Jeans
-                        </p>
-                        <img src="assets/icons/3-5-stars.svg" alt="">
-                        <p>
-                            3.5/5
-                        </p>
-                        <p>
-                            $240
-                        </p>
+                        <div class="product-card-text">
+                            <p class="product-card-title">
+                                Skinny Fit Jeans
+                            </p>
+                            <div class="product-card-rating">
+                                <img src="assets/icons/3-5-stars.svg" alt="" class="product-card-rating-icon">
+                                <p class="product-card-rating-score">
+                                    3.5/5
+                                </p>
+                            </div>
+                            <p class="product-card-price">
+                                $240
+                            </p>
+                        </div>
                     </article>
-                    <article>
-                        <a href="#">
+                    <article class="product-card">
+                        <a href="#" class="product-card-image">
                             <img src="assets/images/Checkedered Shirt.png" alt="">
                         </a>
-                        <p>
-                            Checkedred Shirt
-                        </p>
-                        <img src="assets/icons/4-5-stars.svg" alt="">
-                        <p>
-                            4.5/5
-                        </p>
-                        <p>
-                            $180
-                        </p>
+                        <div class="product-card-text">
+                            <p class="product-card-title">
+                                Checkedred Shirt
+                            </p>
+                            <div class="product-card-rating">
+                                <img src="assets/icons/4-5-stars.svg" alt="" class="product-card-rating-icon">
+                                <p class="product-card-rating-score">
+                                    4.5/5
+                                </p>
+                            </div>
+                            <p class="product-card-price">
+                                $180
+                            </p>
+                        </div>
                     </article>
-                    <article>
-                        <a href="#">
+                    <article class="product-card">
+                        <a href="#" class="product-card-image">
                             <img src="assets/images/Sleeve Striped T-shirt.png" alt="">
                         </a>
-                        <p>
-                            Sleever Striped T-shirt
-                        </p>
-                        <img src="assets/icons/4-5-stars.svg" alt="">
-                        <p>
-                            4.5/5
-                        </p>
-                        <p>
-                            $130
-                        </p>
+                        <div class="product-card-text">
+                            <p class="product-card-title">
+                                Sleever Striped T-shirt
+                            </p>
+                            <div class="product-card-rating">
+                                <img src="assets/icons/4-5-stars.svg" alt="" class="product-card-rating-icon">
+                                <p class="product-card-rating-score">
+                                    4.5/5
+                                </p>
+                            </div>
+                            <p class="product-card-price">
+                                $130
+                            </p>
+                        </div>
                     </article>
-                    <button>
-                        <a href="pages/shop.html?filter=new">
-                            View All Products
-                        </a>
-                    </button>
+                </div>
+                <div class="section-cta-wrapper">
+                    <a href="pages/shop.html?filter=new" class="section-cta">
+                        View All Products
+                    </a>
                 </div>
             </section>
 
             <!-- Top Selling -->
 
-             <section id="top-selling">
-                <h2>
-                    TOP SELLING
-                </h2>
-                <article>
-                        <a href="#">
+             <section class="top-selling" id="top-selling">
+                <div class="top-selling-text">
+                    <h2>
+                        TOP SELLING
+                    </h2>
+                </div>
+                <div class="product-cards" id="top-selling-grid">
+                    <article class="product-card">
+                        <a href="#" class="product-card-image">
                             <img src="assets/images/Vertical Striped Shirt.png" alt="">
                         </a>
-                        <p>
-                            Vertical Striped Shirt
-                        </p>
-                        <img src="assets/icons/5-stars.svg" alt="">
-                        <p>
-                            5/5
-                        </p>
-                        <p>
-                            $212
-                        </p>
+                        <div class="product-card-text">
+                            <p class="product-card-title">
+                                Vertical Striped Shirt
+                            </p>
+                            <div class="product-card-rating">
+                                <img src="assets/icons/5-stars.svg" alt="" class="product-card-rating-icon">
+                                <p class="product-card-rating-score">
+                                    5/5
+                                </p>
+                            </div>
+                            <p class="product-card-price">
+                                $212
+                            </p>
+                        </div>
                     </article>
-                    <article>
-                        <a href="#">
+                    <article class="product-card">
+                        <a href="#" class="product-card-image">
                             <img src="assets/images/Courage Graphic T-shirt.png" alt="">
                         </a>
-                        <p>
-                            Courage Graphic T-shirt
-                        </p>
-                        <img src="assets/icons/4-stars.svg" alt="">
-                        <p>
-                            4/5
-                        </p>
-                        <p>
-                            $145
-                        </p>
+                        <div class="product-card-text">
+                            <p class="product-card-title">
+                                Courage Graphic T-shirt
+                            </p>
+                            <div class="product-card-rating">
+                                <img src="assets/icons/4-stars.svg" alt="" class="product-card-rating-icon">
+                                <p class="product-card-rating-score">
+                                    4/5
+                                </p>
+                            </div>
+                            <p class="product-card-price">
+                                $145
+                            </p>
+                        </div>
                     </article>
-                    <article>
-                        <a href="#">
+                    <article class="product-card">
+                        <a href="#" class="product-card-image">
                             <img src="assets/images/Loose Fit Bermuda Shorts.png" alt="">
                         </a>
-                        <p>
-                            Loose Fit Bermuda Shorts
-                        </p>
-                        <img src="assets/icons/3-stars.svg" alt="">
-                        <p>
-                            3/5
-                        </p>
-                        <p>
-                            $80
-                        </p>
+                        <div class="product-card-text">
+                            <p class="product-card-title">
+                                Loose Fit Bermuda Shorts
+                            </p>
+                            <div class="product-card-rating">
+                                <img src="assets/icons/3-stars.svg" alt="" class="product-card-rating-icon">
+                                <p class="product-card-rating-score">
+                                    3/5
+                                </p>
+                            </div>
+                            <p class="product-card-price">
+                                $80
+                            </p>
+                        </div>
                     </article>
-                    <article>
-                        <a href="#">
+                    <article class="product-card">
+                        <a href="#" class="product-card-image">
                             <img src="assets/images/Faded Skinny Jeans.png" alt="">
                         </a>
-                        <p>
-                            Faded Skinny Jeans
-                        </p>
-                        <img src="assets/icons/4-5-stars.svg" alt="">
-                        <p>
-                            4.5/5
-                        </p>
-                        <p>
-                            $210
-                        </p>
+                        <div class="product-card-text">
+                            <p class="product-card-title">
+                                Faded Skinny Jeans
+                            </p>
+                            <div class="product-card-rating">
+                                <img src="assets/icons/4-5-stars.svg" alt="" class="product-card-rating-icon">
+                                <p class="product-card-rating-score">
+                                    4.5/5
+                                </p>
+                            </div>
+                            <p class="product-card-price">
+                                $210
+                            </p>
+                        </div>
                     </article>
-                    <button>
-                        <a href="pages/shop.html?filter=new">
-                            View All Products
-                        </a>
-                    </button>
+                </div>
+                <div class="section-cta-wrapper">
+                    <a href="pages/shop.html?filter=top-selling" class="section-cta">
+                        View All Products
+                    </a>
+                </div>
              </section>
 
              <!-- Browse By Dress Style -->
 
-             <section id="browse-by-dress-style">
-                <h2>
-                    BROWSE BY DRESS STYLE
-                </h2>
-                <article>
-                    <button>
-                        <img src="assets/images/casual.png" alt="">
-                        <a href="pages/shop.html?filter=casual">
+             <section class="dress-style" id="browse-by-dress-style">
+                <div class="dress-style-text">
+                    <h2>
+                        BROWSE BY DRESS STYLE
+                    </h2>
+                </div>
+                <div class="dress-style-cards">
+                    <a href="pages/shop.html?filter=casual" class="dress-style-card">
+                        <img src="assets/images/casual.png" alt="" class="dress-style-card-image">
+                        <span class="dress-style-card-title">
                             Casual
-                        </a>
-                    </button>
-                    <button>
-                        <img src="assets/images/formal.png" alt="">
-                        <a href="pages/shop.html?filter=formal">
+                        </span>
+                    </a>
+                    <a href="pages/shop.html?filter=formal" class="dress-style-card">
+                        <img src="assets/images/formal.png" alt="" class="dress-style-card-image">
+                        <span class="dress-style-card-title">
                             Formal
-                        </a>
-                    </button>
-                    <button>
-                        <img src="assets/images/party.png" alt="">
-                        <a href="pages/shop.html?filter=party">
+                        </span>
+                    </a>
+                    <a href="pages/shop.html?filter=party" class="dress-style-card">
+                        <img src="assets/images/party.png" alt="" class="dress-style-card-image">
+                        <span class="dress-style-card-title">
                             Party
-                        </a>
-                    </button>
-                    <button>
-                        <img src="assets/images/gym.png" alt="">
-                        <a href="pages/shop.html?filter=sport">
+                        </span>
+                    </a>
+                    <a href="pages/shop.html?filter=sport" class="dress-style-card">
+                        <img src="assets/images/gym.png" alt="" class="dress-style-card-image">
+                        <span class="dress-style-card-title">
                             Gym
-                        </a>
-                    </button>
-                </article>
+                        </span>
+                    </a>
+                </div>
              </section>
 
              <!-- our happy customers -->
 
-             <section id="our-happy-customers">
-                <h2>
-                    OUR HAPPY CUSTOMERS
-                </h2>
-                <button>
-                    <img src="assets/icons/right-arrow.svg" alt="">
-                </button>
-                <button>
-                    <img src="assets/icons/left-arrow.svg" alt="">
-                </button>
-                <div>
-                    <article>
-                        <img src="assets/icons/5-stars.svg" alt="">
-                        <p>
-                            Sarah M.
-                        </p>
-                        <img src="assets/icons/correct-sign-green.svg" alt="">
-                        <p>
-                            "I'm blown away by the quality and style of the clothes I received from shop.com. From casual war to elegant dresses, every piece I've bought has exceeded my expectations. The sizing is consistent and the materials feel premium. Shipping was also incredibly fast! "
-                        </p>
-                    </article>
-                    <article>
-                        <img src="assets/icons/5-stars.svg" alt="">
-                        <p>
-                            Sarah M.
-                        </p>
-                        <img src="assets/icons/correct-sign-green.svg" alt="">
-                        <p>
-                            "I'm blown away by the quality and style of the clothes I received from shop.com. From casual war to elegant dresses, every piece I've bought has exceeded my expectations. The sizing is consistent and the materials feel premium. Shipping was also incredibly fast! "
-                        </p>
-                    </article>
-                    <article>
-                        <img src="assets/icons/5-stars.svg" alt="">
-                        <p>
-                            Sarah M.
-                        </p>
-                        <img src="assets/icons/correct-sign-green.svg" alt="">
-                        <p>
-                            "I'm blown away by the quality and style of the clothes I received from shop.com. From casual war to elegant dresses, every piece I've bought has exceeded my expectations. The sizing is consistent and the materials feel premium. Shipping was also incredibly fast! "
-                        </p>
-                    </article>
-                    <article>
-                        <img src="assets/icons/5-stars.svg" alt="">
-                        <p>
-                            Sarah M.
-                        </p>
-                        <img src="assets/icons/correct-sign-green.svg" alt="">
-                        <p>
-                            "I'm blown away by the quality and style of the clothes I received from shop.com. From casual war to elegant dresses, every piece I've bought has exceeded my expectations. The sizing is consistent and the materials feel premium. Shipping was also incredibly fast! "
-                        </p>
-                    </article>
-                    <article>
-                        <img src="assets/icons/5-stars.svg" alt="">
-                        <p>
-                            Sarah M.
-                        </p>
-                        <img src="assets/icons/correct-sign-green.svg" alt="">
-                        <p>
-                            "I'm blown away by the quality and style of the clothes I received from shop.com. From casual war to elegant dresses, every piece I've bought has exceeded my expectations. The sizing is consistent and the materials feel premium. Shipping was also incredibly fast! "
-                        </p>
-                    </article>
+             <section class="testimonials" id="our-happy-customers">
+                <div class="testimonials-header">
+                    <div class="testimonials-text">
+                        <h2>
+                            OUR HAPPY CUSTOMERS
+                        </h2>
+                    </div>
+                    <div class="testimonials-controls">
+                        <button type="button" class="testimonial-arrow prev" aria-label="Previous testimonial">
+                            <img src="assets/icons/left-arrow.svg" alt="">
+                        </button>
+                        <button type="button" class="testimonial-arrow next" aria-label="Next testimonial">
+                            <img src="assets/icons/right-arrow.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="testimonials-cards">
+                    <div class="testimonials-track">
+                        <article class="testimonials-card">
+                            <div class="testimonials-card-text">
+                                <img src="assets/icons/5-stars.svg" alt="" class="testimonials-card-stars">
+                                <div class="testimonials-card-author">
+                                    <p class="testimonials-card-name">
+                                        Sarah M.
+                                    </p>
+                                    <img src="assets/icons/correct-sign-green.svg" alt="" class="testimonials-card-verified">
+                                </div>
+                                <p class="testimonials-card-quote">
+                                    "I'm blown away by the quality and style of the clothes I received from shop.com. From casual war to elegant dresses, every piece I've bought has exceeded my expectations. The sizing is consistent and the materials feel premium. Shipping was also incredibly fast! "
+                                </p>
+                            </div>
+                        </article>
+                        <article class="testimonials-card">
+                            <div class="testimonials-card-text">
+                                <img src="assets/icons/5-stars.svg" alt="" class="testimonials-card-stars">
+                                <div class="testimonials-card-author">
+                                    <p class="testimonials-card-name">
+                                        Sarah M.
+                                    </p>
+                                    <img src="assets/icons/correct-sign-green.svg" alt="" class="testimonials-card-verified">
+                                </div>
+                                <p class="testimonials-card-quote">
+                                    "I'm blown away by the quality and style of the clothes I received from shop.com. From casual war to elegant dresses, every piece I've bought has exceeded my expectations. The sizing is consistent and the materials feel premium. Shipping was also incredibly fast! "
+                                </p>
+                            </div>
+                        </article>
+                        <article class="testimonials-card">
+                            <div class="testimonials-card-text">
+                                <img src="assets/icons/5-stars.svg" alt="" class="testimonials-card-stars">
+                                <div class="testimonials-card-author">
+                                    <p class="testimonials-card-name">
+                                        Sarah M.
+                                    </p>
+                                    <img src="assets/icons/correct-sign-green.svg" alt="" class="testimonials-card-verified">
+                                </div>
+                                <p class="testimonials-card-quote">
+                                    "I'm blown away by the quality and style of the clothes I received from shop.com. From casual war to elegant dresses, every piece I've bought has exceeded my expectations. The sizing is consistent and the materials feel premium. Shipping was also incredibly fast! "
+                                </p>
+                            </div>
+                        </article>
+                        <article class="testimonials-card">
+                            <div class="testimonials-card-text">
+                                <img src="assets/icons/5-stars.svg" alt="" class="testimonials-card-stars">
+                                <div class="testimonials-card-author">
+                                    <p class="testimonials-card-name">
+                                        Sarah M.
+                                    </p>
+                                    <img src="assets/icons/correct-sign-green.svg" alt="" class="testimonials-card-verified">
+                                </div>
+                                <p class="testimonials-card-quote">
+                                    "I'm blown away by the quality and style of the clothes I received from shop.com. From casual war to elegant dresses, every piece I've bought has exceeded my expectations. The sizing is consistent and the materials feel premium. Shipping was also incredibly fast! "
+                                </p>
+                            </div>
+                        </article>
+                        <article class="testimonials-card">
+                            <div class="testimonials-card-text">
+                                <img src="assets/icons/5-stars.svg" alt="" class="testimonials-card-stars">
+                                <div class="testimonials-card-author">
+                                    <p class="testimonials-card-name">
+                                        Sarah M.
+                                    </p>
+                                    <img src="assets/icons/correct-sign-green.svg" alt="" class="testimonials-card-verified">
+                                </div>
+                                <p class="testimonials-card-quote">
+                                    "I'm blown away by the quality and style of the clothes I received from shop.com. From casual war to elegant dresses, every piece I've bought has exceeded my expectations. The sizing is consistent and the materials feel premium. Shipping was also incredibly fast! "
+                                </p>
+                            </div>
+                        </article>
+                    </div>
                 </div>
              </section>
+
+             <!-- stay upto date about our latest offers -->
+
+             <section class="newsletter" id="stay-upto-date">
+                <div class="newsletter-text">
+                    <h2>
+                        STAY UPTO DATE ABOUT OUR LATEST OFFERS
+                    </h2>
+                </div>
+                <form action="" class="newsletter-form">
+                    <div class="form-field">
+                        <input
+                            type="email"
+                            placeholder="Enter your email adress"
+                            aria-label="Email address"
+                            class="newsletter-input"
+                        >
+                    </div>
+                    <button type="submit" class="newsletter-cta">
+                        Subscribe to Newsletter
+                    </button>
+                </form>
+             </section>
         </main>
-        <footer>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/icons/shop-logo.svg" alt="Shop.co">
+                    </div>
+                    <p class="footer-description">
+                        We have clothes that suits your style and which you're proud to wear. From women to men.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-link" aria-label="Twitter">
+                            <img src="assets/icons/twitter.svg" alt="">
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="Facebook">
+                            <img src="assets/icons/facebook.svg" alt="">
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="Instagram">
+                            <img src="assets/icons/instagram.svg" alt="">
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="GitHub">
+                            <img src="assets/icons/github.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h3>
+                            Company
+                        </h3>
+                        <ul class="footer-links-list">
+                            <li>
+                                <a href="#">
+                                    About
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Features
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Works
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Career
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h3>
+                            Help
+                        </h3>
+                        <ul class="footer-links-list">
+                            <li>
+                                <a href="#">
+                                    Customer Support
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Delivery Details
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Terms & Conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h3>
+                            FAQ
+                        </h3>
+                        <ul class="footer-links-list">
+                            <li>
+                                <a href="#">
+                                    Account
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Manage Deliveries
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Orders
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Payments
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    Shope.co © 2000-2026, All Rights Reserved.
+                </p>
+            </div>
         </footer>
     </body>
 </html>
